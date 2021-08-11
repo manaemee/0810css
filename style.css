@@ -1,0 +1,155 @@
+html, body{
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #76c4c6;
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    align-items: center;
+    }
+    @keyframes dotAnimation {
+        0%{
+            transform: none;
+        }
+        50% {
+          transform: rotate(0.5turn);
+        }
+        100% {
+          transform: rotate(0.5turn);
+        }
+      }
+.dots{
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-bottom: 200px;
+    animation: dotAnimation 1s ease-in-out infinite;
+}
+.dots > *{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+   
+}   
+
+.lines{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@keyframes lineAnim {
+    0% {
+      transform: none;
+    }
+    25% {
+      transform: scaleY(2);
+    }
+    50%,
+    100% {
+      transform: none;
+    }
+  }
+.lines > * {
+    margin: 5px;
+    width: 15px;
+    height: 100px;
+    background-color: white;
+    animation: lineAnim 1s ease-in-out infinite;
+  }
+  .lines div:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .lines div:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  .lines div:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  .lines div:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+
+
+/*
+@keyframes big {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(1.5);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes rotate {
+    50% {
+      transform: rotate(0.5turn);
+    }
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+}
+
+#second {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#second > * {
+  margin: 5px;
+  width: 15px;
+  height: 100px;
+  background-color: white;
+}
+#first {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#first > * {
+  margin: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+#first div:first-child {
+  animation: rotate 1s ease-in-out infinite;
+}
+#second div:first-child {
+  animation: big 1s ease-in-out infinite;
+}
+
+#second div:nth-child(2) {
+  animation: big 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+#second div:nth-child(3) {
+  animation: big 1s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+#second div:nth-child(4) {
+  animation: big 1s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+#second div:nth-child(5) {
+  animation: big 1s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
